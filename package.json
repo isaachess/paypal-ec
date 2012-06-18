@@ -1,0 +1,20 @@
+{
+  "name"       : "paypal-ec",
+  "version"    : "0.1.0",
+  "description": "An API wrapper for PayPal's Express Checkout.",
+  "keywords"    : [ "paypal", "express", "checkout", "payment" ],
+  "author"      : "dreamerslab <mason@dreamerslab.com>",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url" : "https://github.com/dreamerslab/paypal-ec.git"
+  },
+  "homepage": "",
+  "bugs"    : "https://github.com/dreamerslab/paypal-ec/issues",
+  "main"    : "index",
+  "engines" : [ "node >= 0.6.0" ],
+  "licenses": "MIT"
+}
