@@ -41,7 +41,7 @@ Create a new PayPalEC object.
 > cred
 
     type: Object
-    desc: the credential requred to make an API call.
+    desc: the credential required to make an API call.
 
 > opts
 
