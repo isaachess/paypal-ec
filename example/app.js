@@ -29,21 +29,22 @@ var cred = {
 var opts = {
   sandbox : true,
   version : '78.0'
-}
+};
+
+var item = {
+  returnUrl : 'http://localhost:3000/confirm',
+  cancelUrl : 'http://localhost:3000/cancel',
+  SOLUTIONTYPE                   : 'sole',
+  PAYMENTREQUEST_0_AMT           : '10.0',
+  PAYMENTREQUEST_0_DESC          : 'Something',
+  PAYMENTREQUEST_0_CURRENCYCODE  : 'USD',
+  PAYMENTREQUEST_0_PAYMENTACTION : 'Sale'
+};
+
+var ec = new PayPalEC( cred, opts );
 
 app.get( '/checkout', function ( req, res, next ){
-  var ec     = new PayPalEC( cred, opts );
-  var params = {
-    returnUrl : 'http://localhost:3000/confirm',
-    cancelUrl : 'http://localhost:3000/cancel',
-    SOLUTIONTYPE                   : 'sole',
-    PAYMENTREQUEST_0_AMT           : '10.0',
-    PAYMENTREQUEST_0_DESC          : 'Something',
-    PAYMENTREQUEST_0_CURRENCYCODE  : 'USD',
-    PAYMENTREQUEST_0_PAYMENTACTION : 'Sale',
-  };
-
-  ec.set( params, function ( err, data ){
+  ec.set( item, function ( err, data ){
     if( err ) return next( err );
 
     res.render( 'checkout', {
@@ -54,7 +55,6 @@ app.get( '/checkout', function ( req, res, next ){
 });
 
 app.get( '/confirm', function ( req, res, next ){
-  var ec     = new PayPalEC( cred, opts );
   var params = {
     TOKEN : req.query.token
   };
@@ -70,7 +70,6 @@ app.get( '/confirm', function ( req, res, next ){
 });
 
 app.get( '/complete', function ( req, res, next ){
-  var ec     = new PayPalEC( cred, opts );
   var params = {
     TOKEN   : req.query.token,
     PAYERID : req.query.PayerId
@@ -91,6 +90,7 @@ app.get( '/cancel', function ( req, res, next ){
   res.render( 'cancel', { title : 'Payment Cancelled' });
 });
 
+console.log( 'Server started on http://localhost:3000' );
 app.listen( 3000 );
 
 
