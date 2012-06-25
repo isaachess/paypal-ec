@@ -44,7 +44,9 @@ var item = {
 var ec = new PayPalEC( cred, opts );
 
 app.get( '/checkout', function ( req, res, next ){
-  ec.set( item, function ( err, data ){
+  var params = item;
+
+  ec.set( params, function ( err, data ){
     if( err ) return next( err );
 
     res.render( 'checkout', {
@@ -70,24 +72,24 @@ app.get( '/confirm', function ( req, res, next ){
 });
 
 app.get( '/complete', function ( req, res, next ){
-  var params = {
-    TOKEN   : req.query.token,
-    PAYERID : req.query.PayerId
-  };
+  var params = item;
 
-  ec.get_details( params, function ( err, data ){
+  params.TOKEN   = req.query.token;
+  params.PAYERID = req.query.PayerID;
+
+  ec.do_payment( params, function ( err, data ){
     if( err ) return next( err );
 
-    ec.do_payment( data, function ( err, data ){
-      if( err ) return next( err );
-
-      res.render( 'complete', { title : 'Payment Completed' });
+    res.render( 'complete', {
+      title : 'Payment Completed'
     });
   });
 });
 
 app.get( '/cancel', function ( req, res, next ){
-  res.render( 'cancel', { title : 'Payment Cancelled' });
+  res.render( 'cancel', {
+    title : 'Payment Cancelled'
+  });
 });
 
 console.log( 'Server started on http://localhost:3000' );
