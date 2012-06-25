@@ -1,6 +1,6 @@
 {
   "name"        : "paypal-ec",
-  "version"     : "0.2.0",
+  "version"     : "0.2.1",
   "description" : "An API wrapper for PayPal's Express Checkout.",
   "keywords"    : [ "paypal", "express", "checkout", "payment" ],
   "author"      : "dreamerslab <mason@dreamerslab.com>",
