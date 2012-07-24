@@ -1,0 +1,10 @@
+<% title = 'Select a plan' %>
+
+<form method="post" action="/checkout">
+  <input type="radio" name="plan" value="normal" checked />
+  One-time Purchase (10.00 USD)<br />
+  <input type="radio" name="plan" value="recurring" />
+  Recurring Payment (0.99 USD/M)<br />
+
+  <input type="submit" value="Checkout" />
+</form>
