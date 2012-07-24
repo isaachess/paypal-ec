@@ -21,14 +21,14 @@ app.helpers({
 });
 
 var cred = {
-  username  : 'seller_1339472528_biz_api1.gmail.com',
-  password  : '1339472553',
-  signature : 'AFcWxV21C7fd0v3bYYYRCpSSRl31Af-aECo8vsiP1HospgIyBCFncbx3'
+  username  : 'seller_1340340556_biz_api1.dreamerslab.com',
+  password  : '1340340580',
+  signature : 'AFcWxV21C7fd0v3bYYYRCpSSRl31AvaaLJ2YPkTImMsYibPi60jMly6j'
 };
 
 var opts = {
   sandbox : true,
-  version : '78.0'
+  version : '88.0'
 };
 
 var item = {
