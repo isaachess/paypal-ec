@@ -35,24 +35,32 @@ var plans = {
   normal : {
     returnUrl : 'http://localhost:3000/confirm?plan=normal',
     cancelUrl : 'http://localhost:3000/cancel',
-    SOLUTIONTYPE                   : 'sole',
-    PAYMENTREQUEST_0_AMT           : '10.00',
-    PAYMENTREQUEST_0_DESC          : 'One-time Purchase',
-    PAYMENTREQUEST_0_CURRENCYCODE  : 'USD',
-    PAYMENTREQUEST_0_PAYMENTACTION : 'Sale'
+    SOLUTIONTYPE                     : 'sole',
+    PAYMENTREQUEST_0_AMT             : '10.00',
+    PAYMENTREQUEST_0_DESC            : 'One-time Purchase',
+    PAYMENTREQUEST_0_CURRENCYCODE    : 'USD',
+    PAYMENTREQUEST_0_PAYMENTACTION   : 'Sale',
+    L_PAYMENTREQUEST_0_ITEMCATEGORY0 : 'Digital',
+    L_PAYMENTREQUEST_0_NAME0         : 'One-time',
+    L_PAYMENTREQUEST_0_AMT0          : '10.00',
+    L_PAYMENTREQUEST_0_QTY0          : '1'
   },
 
   recurring : {
     returnUrl : 'http://localhost:3000/confirm?plan=recurring',
     cancelUrl : 'http://localhost:3000/cancel',
-    DESC                           : 'Recurring Payment',
-    AMT                            : '0.99',
-    CURRENCYCODE                   : 'USD',
-    PROFILESTARTDATE               : '2012-08-01T03:00:00',
-    L_BILLINGTYPE0                 : 'RecurringPayments',
-    L_BILLINGAGREEMENTDESCRIPTION0 : 'Recurring Payment',
-    BILLINGPERIOD                  : 'Month',
-    BILLINGFREQUENCY               : '1'
+    DESC                             : 'Recurring Payment',
+    AMT                              : '0.99',
+    CURRENCYCODE                     : 'USD',
+    PROFILESTARTDATE                 : '2012-08-01T03:00:00',
+    BILLINGPERIOD                    : 'Month',
+    BILLINGFREQUENCY                 : '1',
+    L_BILLINGTYPE0                   : 'RecurringPayments',
+    L_BILLINGAGREEMENTDESCRIPTION0   : 'Recurring Payment',
+    L_PAYMENTREQUEST_0_ITEMCATEGORY0 : 'Digital',
+    L_PAYMENTREQUEST_0_NAME0         : 'Recurring',
+    L_PAYMENTREQUEST_0_AMT0          : '0.99',
+    L_PAYMENTREQUEST_0_QTY0          : '1'
   }
 };
 
