@@ -28,7 +28,7 @@ var cred = {
 
 var opts = {
   sandbox : true,
-  version : '88.0'
+  version : '92.0'
 };
 
 var plans = {
