@@ -1,4 +1,4 @@
-# paypal-ec
+# paypal-ec <sup>0.2.4</sup>
 
 A simple API wrapper for PayPal's Express Checkout.
 
@@ -140,6 +140,21 @@ Make a `DoExpressCheckoutPayment` API call to PayPal.
       // really charge the user for the payment
     });
 
+### ec.do_capture( params, calllback );
+
+Make a `DoCapture` API call to PayPal.
+
+#### Arguments
+
+> params
+
+    type: Object
+    desc: Contains the authorization id and capture information.
+
+> callback
+
+    type: Function
+    desc: Callback function to get called when done.
 
 
 
