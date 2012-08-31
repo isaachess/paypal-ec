@@ -1,4 +1,4 @@
-# paypal-ec <sup>0.2.4</sup>
+# paypal-ec <sup>0.2.5</sup>
 
 A simple API wrapper for PayPal's Express Checkout.
 
@@ -85,6 +85,62 @@ Make a `GetExpressCheckoutDetails` API call to PayPal.
 Make a `DoExpressCheckoutPayment` API call to PayPal.
 
 #### Arguments
+
+> params
+
+    type: Object
+    desc: Contains the token and all the payment information.
+
+> callback
+
+    type: Function
+    desc: Callback function to get called when done.
+
+### ec.do_capture( params, callback )
+
+Make a `DoCapture` API call to PayPal.
+
+> params
+
+    type: Object
+    desc: Contains the token and all the payment information.
+
+> callback
+
+    type: Function
+    desc: Callback function to get called when done.
+
+### ec.do_void( params, callback )
+
+Make a `DoVoid` API call to PayPal.
+
+> params
+
+    type: Object
+    desc: Contains the token and all the payment information.
+
+> callback
+
+    type: Function
+    desc: Callback function to get called when done.
+
+### ec.do_reauthorization( params, callback )
+
+Make a `DoReauthorization` API call to PayPal.
+
+> params
+
+    type: Object
+    desc: Contains the token and all the payment information.
+
+> callback
+
+    type: Function
+    desc: Callback function to get called when done.
+
+### ec.do_authorization( params, callback)
+
+Make a `DoAuthorization` API call to PayPal.
 
 > params
 
