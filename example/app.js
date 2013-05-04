@@ -71,6 +71,10 @@ app.get( '/plans', function ( req, res, next ){
 });
 
 app.post( '/checkout', function ( req, res, next ){
+  
+  delete plans[ req.body.plan ].TOKEN;
+  delete plans[ req.body.plan ].PAYERID;
+  
   var params = plans[ req.body.plan ];
 
   ec.set( params, function ( err, data ){
