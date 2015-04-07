@@ -1,4 +1,4 @@
-# paypal-ec <sup>0.2.5</sup>
+# paypal-ec <sup>0.2.7</sup>
 
 A simple API wrapper for PayPal's Express Checkout.
 
